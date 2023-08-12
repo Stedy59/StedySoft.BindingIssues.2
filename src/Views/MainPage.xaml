@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+	x:Class="StedySoft.BindingIssues.Views.MainPage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:colors="clr-namespace:StedySoft.Maui.Framework"
+	xmlns:controls="clr-namespace:StedySoft.Maui.Framework.Controls;assembly=StedySoft.BindingIssues"
+	xmlns:models="clr-namespace:StedySoft.BindingIssues"
+	xmlns:settings="clr-namespace:StedySoft.Maui.Framework"
+	Title="StedySoft BindingIssues">
+
+	<ContentPage.Content>
+
+		<Grid
+			RowDefinitions="1*,1*">
+			
+			<controls:ViewBox
+				Grid.Row="0"
+				Margin="15"
+				HorizontalOptions="Center"
+				VerticalOptions="Start">
+				<controls:MauiClockFace
+					UseBinding="True"
+					Margin="15"/>
+			</controls:ViewBox>
+			
+			<controls:ViewBox
+				Grid.Row="1"
+				Margin="15"
+				HorizontalOptions="Center"
+				VerticalOptions="Start">
+				<controls:MauiClockFace
+					UseBinding="False"
+					Margin="15"/>
+			</controls:ViewBox>
+
+		</Grid>
+
+
+	</ContentPage.Content>
+</ContentPage>

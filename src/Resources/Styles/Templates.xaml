@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+	x:Class="StedySoft.BindingIssues.Templates"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:clock="clr-namespace:StedySoft.Maui.Framework.Controls;assembly=StedySoft.BindingIssues"
+	xmlns:colors="clr-namespace:StedySoft.Maui.Framework;assembly=StedySoft.BindingIssues"
+	xmlns:controls="clr-namespace:StedySoft.Maui.Framework.Controls;assembly=StedySoft.BindingIssues"
+	xmlns:convertersShared="clr-namespace:StedySoft.Maui.Framework;assembly=StedySoft.BindingIssues"
+	xmlns:fonts="clr-namespace:StedySoft.Maui.Framework;assembly=StedySoft.BindingIssues"
+	xmlns:shadows="clr-namespace:StedySoft.Maui.Framework;assembly=StedySoft.BindingIssues">
+
+	<!--#region Templates-->
+
+	<!--#region controls:MauiClockFace-->
+	<ControlTemplate
+		x:Key="MauiClockFaceTemplate">
+		<Grid
+			x:Name="clockGrid">
+			<Image
+				x:Name="imgClockFace"
+				WidthRequest="440"
+				HeightRequest="440"
+				Aspect="Fill"
+				Source="{AppThemeBinding Light=clockface_light.png, Dark=clockface_dark.png}"/>
+			<Image
+				x:Name="imgClockHour"
+				WidthRequest="18"
+				HeightRequest="300"
+				Aspect="Fill"
+				Source="clockhour.png">
+				<Image.Behaviors>
+					<controls:IconTintColorBehavior
+						TintColor="{colors:Color TextColor}"/>
+				</Image.Behaviors>
+			</Image>
+			<Image
+				x:Name="imgClockMinute"
+				WidthRequest="20"
+				HeightRequest="300"
+				Aspect="Fill"
+				Source="clockminute.png">
+				<Image.Behaviors>
+					<controls:IconTintColorBehavior
+						TintColor="{colors:Color TextColor}"/>
+				</Image.Behaviors>
+			</Image>
+			<Image
+				x:Name="imgClockSecond"
+				WidthRequest="25"
+				HeightRequest="305"
+				Aspect="Fill"
+				Source="clocksecond.png">
+				<Image.Behaviors>
+					<controls:IconTintColorBehavior
+						TintColor="{colors:Color AccentColor}"/>
+				</Image.Behaviors>
+			</Image>
+			<Image
+				x:Name="imgClockCenter"
+				WidthRequest="26"
+				HeightRequest="26"
+				Aspect="Fill"
+				Source="clockcenter.png">
+				<Image.Behaviors>
+					<controls:IconTintColorBehavior
+						TintColor="{colors:Color TextColor}"/>
+				</Image.Behaviors>
+			</Image>
+		</Grid>
+	</ControlTemplate>
+	<!--#endregion-->
+
+	<!--#endregion-->
+
+</ResourceDictionary>
